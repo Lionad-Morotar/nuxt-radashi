@@ -1,28 +1,28 @@
-## Radash for Nuxt
+## Radashi for Nuxt
 
-[Radash](https://radash-docs.vercel.app) auto-import module for [Nuxt](https://nuxtjs.org).
+[Radashi](https://github.com/radashi-org/radashi) auto-import module for [Nuxt](https://nuxtjs.org).
 
 [Comparing Radashi to Radash](https://radashi.js.org/blog/vs-radash/)
 
 ## 📦 Install
 
-Install `nuxt-radash` as development dependency:
+Install `nuxt-radashi` as development dependency:
 
 ```bash
-npm i nuxt-radash -D
+npm i nuxt-radashi -D
 ```
 
 Add it to the `modules` section of your `nuxt.config`:
 
 ```ts
 export default defineNuxtConfig({
-  modules: ["nuxt-radash"],
+  modules: ["nuxt-radashi"],
 });
 ```
 
 ## 🚀 Example
 
-Use any [Radash](https://radash-docs.vercel.app/) methods in your Nuxt application, they will be auto-imported!
+Use any [Radashi](https://github.com/radashi-org/radashi) methods in your Nuxt application, they will be auto-imported!
 
 ```html
 <script setup>
@@ -67,17 +67,17 @@ const snake = stringToSnake('green fish blue fish')
 
 | Name               | Default | Description                                                                           |
 | ------------------ | ------- | ------------------------------------------------------------------------------------- |
-| `prefix`           | `'use'` | String to prepend before each Radash function (false to disable)                      |
+| `prefix`           | `'use'` | String to prepend before each Radashi function (false to disable)                      |
 | `prefixSkip`       | `'is'`  | Functions that starts with this keywords will be skipped by prefix (false to disable) |
 | `upperAfterPrefix` | `true`  | If true it will automatically uppercase first letter after prefix (false to disable)  |
-| `alias`            | `[]`    | Array of array pairs to rename specific Radash functions (prefix is still added)      |
+| `alias`            | `[]`    | Array of array pairs to rename specific Radashi functions (prefix is still added)      |
 
 ## 💻 Example - Config
 
 ```ts
 export default defineNuxtConfig({
-  modules: ["nuxt-radash"],
-   radash: {
+  modules: ["nuxt-radashi"],
+   radashi: {
     prefix: '_',
     prefixSkip: ['string'],
     upperAfterPrefix: true,
@@ -89,8 +89,5 @@ export default defineNuxtConfig({
 ```
 
 ## Acknowledgement
-The development of nuxt-radash was made possible thanks to the inspiration and code base from [nuxt-lodash](https://github.com/cipami/nuxt-lodash).
 
-## 📄 License
-
-[MIT License](https://github.com/bbg/nuxt-radash/blob/master/LICENSE) © 2023 - [Batuhan Göksu](https://github.com/bbg)
+The development of nuxt-radashi was heavily based on [nuxt-radash](https://github.com/bbg/nuxt-radash)

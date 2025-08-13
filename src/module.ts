@@ -1,9 +1,9 @@
 import { addImports, defineNuxtModule } from "@nuxt/kit";
-import * as radash from "radash";
+import * as radashi from "radashi";
 
 export interface ModuleOptions {
   /**
-   * Prefix to be added before every radash function
+   * Prefix to be added before every radashi function
    *
    * `false` to disable uppercasing
    *
@@ -36,10 +36,10 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: "nuxt-radash",
-    configKey: "radash",
+    name: "nuxt-radashi",
+    configKey: "radashi",
     compatibility: {
-      nuxt: "^3.0.0",
+      nuxt: "^4.0.0",
     },
   },
   defaults: {
@@ -51,19 +51,19 @@ export default defineNuxtModule<ModuleOptions>({
   setup(options, nuxt) {
     const aliasMap = new Map<string, string>(options.alias);
     const prefixSkip = options.prefixSkip
-      ? radash.isArray(options.prefixSkip)
+      ? radashi.isArray(options.prefixSkip)
         ? options.prefixSkip
         : [options.prefixSkip]
       : [];
-    for (const name of Object.keys(radash)) {
+    for (const name of Object.keys(radashi)) {
       const alias = aliasMap.has(name) ? aliasMap.get(name)! : name;
       const prefix =
         (!prefixSkip.some((key) => alias.startsWith(key)) && options.prefix) ||
         "";
       const as = prefix
-        ? prefix + (options.upperAfterPrefix ? radash.pascal(alias) : alias)
+        ? prefix + (options.upperAfterPrefix ? radashi.pascal(alias) : alias)
         : alias;
-      addImports({ name, as, from: "radash" });
+      addImports({ name, as, from: "radashi" });
     }
   },
 });

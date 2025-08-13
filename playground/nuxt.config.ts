@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
-  radash: {
+  radashi: {
     prefix: '_',
     prefixSkip: ['string'],
     upperAfterPrefix: true,
