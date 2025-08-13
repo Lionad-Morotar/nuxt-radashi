@@ -2,6 +2,8 @@
 
 [Radash](https://radash-docs.vercel.app) auto-import module for [Nuxt](https://nuxtjs.org).
 
+[Comparing Radashi to Radash](https://radashi.js.org/blog/vs-radash/)
+
 ## 📦 Install
 
 Install `nuxt-radash` as development dependency:
