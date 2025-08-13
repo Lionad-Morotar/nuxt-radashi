@@ -51,7 +51,7 @@ export default defineNuxtModule<ModuleOptions>({
   setup(options, nuxt) {
     const aliasMap = new Map<string, string>(options.alias);
     const prefixSkip = options.prefixSkip
-      ? radashi.isArray(options.prefixSkip)
+      ? Array.isArray(options.prefixSkip)
         ? options.prefixSkip
         : [options.prefixSkip]
       : [];
